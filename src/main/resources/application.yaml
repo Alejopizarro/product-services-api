@@ -1,0 +1,24 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/alejopizarro
+    username: postgres
+    password: 1234
+  jpa:
+    hibernate:
+      ddl-auto: update
+logging:
+  level:
+    org:
+      hibernate:
+        SQL: DEBUG
+stripe:
+  secret:
+    key: rk_test_51QuhaN2L9W8XCV19XS9rXS5GCIfa6w5oodMPTzOZ2CPVgBb8voXsUxtZhq46yLq18qiRlcAh1k5Ixk1AbHdKqopB00FdHOpyjM
+    endpoint: whsec_61aecb000b1f0d90fbfa85c74fe1e29b40af6d67b40d02195a7875d7e8055394
+  products:
+    starter: prod_RqAcMMhclGNU9C
+    all-in: prod_RqAcuXo4rEJXHx
+server:
+  port: 8080
+jwt:
+  secret: adjsfalksdfjlkasdfjklasdjfklasjdfkljasdklfasldhfjlasdhfjlahsdjflhadsjkfdaslkfdjakldsalkadsfklasdfjklasdjfkla
