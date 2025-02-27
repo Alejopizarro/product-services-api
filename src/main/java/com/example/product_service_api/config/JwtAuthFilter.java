@@ -2,6 +2,7 @@ package com.example.product_service_api.config;
 
 import com.example.product_service_api.commons.entities.UserModel;
 import com.example.product_service_api.repositories.UserRepository;
+import com.example.product_service_api.service.impl.JwtService;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
