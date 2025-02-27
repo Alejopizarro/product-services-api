@@ -1,7 +1,6 @@
 package com.example.product_service_api.controllers;
 
 import com.example.product_service_api.commons.constants.ApiPathConstants;
-import com.example.product_service_api.commons.dtos.LoginRequest;
 import com.example.product_service_api.commons.dtos.TokenResponse;
 import com.example.product_service_api.commons.dtos.UserRequest;
 import jakarta.validation.Valid;
@@ -18,6 +17,6 @@ public interface AuthApi {
     );
     @PostMapping(value = "/login")
     ResponseEntity<TokenResponse> loginUser(
-            @RequestBody @Valid LoginRequest loginRequest
+            @RequestBody @Valid UserRequest userRequest
     );
 }

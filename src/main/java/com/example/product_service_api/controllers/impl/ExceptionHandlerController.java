@@ -1,5 +1,6 @@
 package com.example.product_service_api.controllers.impl;
 
+import com.example.product_service_api.commons.dtos.ErrorResponse;
 import com.example.product_service_api.commons.exceptions.BadRequestException;
 import com.example.product_service_api.commons.exceptions.GeneralException;
 import com.example.product_service_api.commons.exceptions.NotFoundException;
@@ -19,7 +20,7 @@ public class ExceptionHandlerController {
         log.warn("General Request Exception with message: {}", exception.getMessage());
         var errorResponse = getErrorResponse(exception);
 
-        return ResponseEntity.status(ErrorResponse.getHttpStatus())
+        return ResponseEntity.status(errorResponse.getHttpStatus())
                 .body(errorResponse);
     }
     private ErrorResponse getErrorResponse(GeneralException exception) {
